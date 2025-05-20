@@ -1,0 +1,87 @@
+/* General styling for about page */
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+nav .logo img {
+    width: 150px;
+}
+header {
+    background: #fdfdfd;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+}
+
+nav {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.about-us {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+footer {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+.container {
+    position: relative;
+    height: 450px; /* hoặc 100vh nếu muốn full màn hình */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center; /* canh giữa theo chiều ngang */
+    align-items: flex-end;   /* đẩy xuống đáy */
+  }
+  
+  .bottom-text {
+    margin-bottom: 3px; /* cách đáy 1 chút nếu muốn */
+}
+.footer {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center ;
+}

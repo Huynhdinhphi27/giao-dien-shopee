@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thanh Toán</title>
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logo"><img src="https://vectordohoa.com/wp-content/uploads/2023/10/logo-shopee-vectordohoa.com-3-01.jpg" alt="Logo"></div>
+    </nav>
+         <a href="index.html">Trang Chủ</a> | 
+        <a href="products.html">Sản Phẩm</a> | 
+          <a href="cart.html">Giỏ Hàng</a>
+
+    </nav>
+  </header>
+
+  <h1>Thông Tin Thanh Toán</h1>
+
+  <form id="order-form">
+    <label for="fullname">Họ và tên:</label><br />
+    <input type="text" id="fullname" name="fullname" required /><br />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required /><br />
+
+    <label for="address">Địa chỉ:</label><br />
+    <input type="text" id="address" name="address" required /><br />
+
+    <label for="phone">Số điện thoại:</label><br />
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{9,11}" required /><br />
+
+    <button type="submit">Gửi đơn hàng</button>
+  </form>
+
+  <script src="js/checkout.js"></script>
+</body>
+</html>

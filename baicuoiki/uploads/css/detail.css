@@ -1,0 +1,23 @@
+/* css/detail.css */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.detail-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.detail-container img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #ff5722;
+}

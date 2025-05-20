@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Giỏ Hàng</title>
+  <link rel="stylesheet" href="css/cart.css" />
+  <style>
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 12px; border: 1px solid #ccc; text-align: center; }
+    input[type="number"] { width: 60px; }
+    button { padding: 6px 12px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><a href="index.html"><img src="https://vectordohoa.com/wp-content/uploads/2023/10/logo-shopee-vectordohoa.com-3-01.jpg" alt="Logo"></a></div>
+    </nav>
+  </header>
+  <section id="cart">
+    <h2>Giỏ Hàng Của Bạn</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Ảnh</th>
+          <th>Tên</th>
+          <th>Đơn Giá</th>
+          <th>Số Lượng</th>
+          <th>Tổng Tiền</th>
+          <th>Xóa</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- Sản phẩm sẽ được hiển thị ở đây -->
+      </tbody>
+    </table>
+    <h3 id="total-price">Tổng Tiền: 0đ</h3>
+    <button id="checkout-btn">Thanh Toán</button>
+  </section>
+
+  <script>
+    function renderCart() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const tbody = document.getElementById("cart-items");
+      tbody.innerHTML = "";
+
+      let totalPrice = 0;
+
+      cart.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        totalPrice += itemTotal;
+
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+          <td><img src="${item.image}" alt="${item.name}" width="80" /></td>
+          <td>${item.name}</td>
+          <td>${item.price.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'})}</td>
+          <td><input type="number" min="1" value="${item.quantity}" data-index="${index}" class="qty-input"></td>
+          <td>${itemTotal.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'})}</td>
+          <td><button data-index="${index}" class="remove-btn">Xóa</button></td>
+        `;
+
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById("total-price").innerText = `Tổng Tiền: ${totalPrice.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'})}`;
+    }
+
+    // Cập nhật số lượng
+    document.addEventListener("input", function(e) {
+      if (e.target.classList.contains("qty-input")) {
+        const index = e.target.dataset.index;
+        const qty = parseInt(e.target.value);
+        if (qty < 1) {
+          e.target.value = 1;
+          return;
+        }
+
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart[index].quantity = qty;
+        localStorage.setItem("cart", JSON.stringify(cart));
+        renderCart();
+      }
+    });
+
+    // Xóa sản phẩm
+    document.addEventListener("click", function(e) {
+      if (e.target.classList.contains("remove-btn")) {
+        const index = e.target.dataset.index;
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        renderCart();
+      }
+    });
+
+    // Thanh toán
+    document.getElementById("checkout-btn").addEventListener("click", function() {
+      window.location.href = "checkout.html"; // chuyển đến trang thanh toán
+    });
+
+    // Khởi tạo hiển thị
+    renderCart();
+  </script>
+</body>
+</html>

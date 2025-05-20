@@ -1,0 +1,97 @@
+/* General styling for services page */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+nav .logo img {
+    width: 150px;
+}
+header {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+}
+
+nav {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.service-item {
+    display: inline-block;
+    width: 50%;
+    padding: 8px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-item img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.service-item h3 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+.container {
+    position: relative;
+    height: 150px; /* hoặc 100vh nếu muốn full màn hình */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center; /* canh giữa theo chiều ngang */
+    align-items: flex-end;   /* đẩy xuống đáy */
+  }
+  
+  .bottom-text {
+    margin-bottom: 8px; /* cách đáy 1 chút nếu muốn */
+}
+.footer {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center ;
+}

@@ -1,0 +1,103 @@
+/* General styling for products page */
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+nav .logo img {
+    width: 150px;
+}
+header {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+}
+
+nav {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 50px 20px;
+    }
+.product-item {
+    width: 10%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-item h3 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+}
+
+.product-item p {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+}
+.product-item button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product-item button:hover {
+    background-color: #444;
+}
+.container {
+    position: relative;
+    height: 150px; /* hoặc 100vh nếu muốn full màn hình */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center; /* canh giữa theo chiều ngang */
+    align-items: flex-end;   /* đẩy xuống đáy */
+  }
+  
+  .bottom-text {
+    margin-bottom: 8px; /* cách đáy 1 chút nếu muốn */
+}
+.footer {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center ;
+}
+
+
